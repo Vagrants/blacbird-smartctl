@@ -1,0 +1,5 @@
+include smartctl.py
+include smartctl.cfg
+include README.md
+include CHANGELOG.md
+include PROJECT.txt
