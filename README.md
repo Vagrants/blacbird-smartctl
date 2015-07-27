@@ -18,3 +18,15 @@ Or you can also install rpm package from [blackbird repository](https://github.c
 ```
 $ sudo yum install blackbird-smartctl --enablerepo=blackbird
 ```
+
+## notice
+
+You need `/usr/sbin/smartctl` for `blackbird-smartctl`.  
+And `blackbird` needs root privilege for executing `/usr/sbin/smartctl`.  
+So you should add bbd entry in the sudoers flie like this.
+
+```
+# /etc/sudoers.d/bbd
+bbd ALL=(ALL) NOPASSWD:/usr/sbin/smartctl
+Defaults:bbd !requiretty
+```
